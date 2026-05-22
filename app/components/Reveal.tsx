@@ -9,8 +9,9 @@ export function RevealOnScroll() {
       if (!hash) return;
       const target = document.getElementById(hash);
       if (!target) return;
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       requestAnimationFrame(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
       });
     };
     scrollToHash();
