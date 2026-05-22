@@ -86,6 +86,13 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
 
   return (
     <section style={{ padding: "56px 0 120px" }}>
+      <style>{`
+        @media (max-width: 640px) {
+          .camp-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+          .camp-grid p { font-size: 12px !important; line-height: 1.35 !important; }
+          .camp-grid .mono { font-size: 10px !important; }
+        }
+      `}</style>
       <div className="container">
         {/* Filter bar */}
         <div
@@ -196,6 +203,7 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
               return (
                 <>
                   <div
+                    className="camp-grid"
                     style={{
                       display: "grid",
                       gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
