@@ -448,9 +448,8 @@ function Papers() {
         </div>
         <div style={{ display: "grid", gap: 12 }}>
           {papers.map((p) => (
-            <Link
+            <article
               key={p.title}
-              href="#"
               className="card-dark"
               style={{
                 display: "grid",
@@ -465,8 +464,22 @@ function Papers() {
                 <div style={{ fontWeight: 500, fontSize: 22, marginTop: 8, fontFamily: "var(--font-display)", letterSpacing: "-0.015em" }}>{p.title}</div>
                 <div style={{ fontSize: 13, color: "rgba(245,247,250,0.55)", marginTop: 6 }}>{p.authors}</div>
               </div>
-              <span style={{ color: "var(--brand-2)", fontWeight: 600, fontSize: 14 }}>Read →</span>
-            </Link>
+              <span
+                className="mono"
+                style={{
+                  color: "rgba(245,247,250,0.55)",
+                  fontSize: 11,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  padding: "5px 10px",
+                  border: "1px solid rgba(245,247,250,0.18)",
+                  borderRadius: 999,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Link on request
+              </span>
+            </article>
           ))}
         </div>
       </div>
