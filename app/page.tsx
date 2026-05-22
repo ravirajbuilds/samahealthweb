@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <Nav variant="hero" />
-      <main>
+      <main id="main">
         <Hero />
         <LogoMarquee />
         <Scenarios />

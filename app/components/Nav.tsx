@@ -47,6 +47,27 @@ export function Nav({ variant = "light" }: { variant?: "light" | "dark" | "hero"
         color: textColor,
       }}
     >
+      <a
+        href="#main"
+        style={{
+          position: "absolute",
+          left: 8,
+          top: 8,
+          padding: "10px 16px",
+          background: "var(--ink)",
+          color: "#fff",
+          borderRadius: 8,
+          fontWeight: 600,
+          fontSize: 14,
+          transform: "translateY(-200%)",
+          transition: "transform .15s ease",
+          zIndex: 101,
+        }}
+        onFocus={(e) => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
+        onBlur={(e) => { (e.currentTarget as HTMLElement).style.transform = "translateY(-200%)"; }}
+      >
+        Skip to content
+      </a>
       <div
         className="container"
         style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}

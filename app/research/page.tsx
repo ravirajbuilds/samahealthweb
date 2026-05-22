@@ -15,7 +15,7 @@ export default function ResearchPage() {
   return (
     <div className="dark-bg">
       <Nav variant="dark" />
-      <main>
+      <main id="main">
         <ResearchHero />
         <ProblemAtScale />
         <Translation />

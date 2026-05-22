@@ -43,7 +43,7 @@ export default function CampsPage() {
   return (
     <>
       <Nav variant="light" />
-      <main>
+      <main id="main">
         <header
           style={{
             paddingTop: 140,
