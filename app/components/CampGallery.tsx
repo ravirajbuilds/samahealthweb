@@ -96,7 +96,7 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
           .camp-filter-chips::-webkit-scrollbar { display: none; }
           .camp-filter-chips button { white-space: nowrap; font-size: 12px !important; padding: 7px 12px !important; }
           .camp-filter-select { font-size: 12px !important; padding: 7px 10px !important; flex-shrink: 0; max-width: 130px; }
-          .camp-event-head h3 { font-size: 18px !important; }
+          .camp-event-head h2 { font-size: 18px !important; }
           .camp-event-head .mono { font-size: 9px !important; }
           .camp-event-head span[style*="brand"], .camp-event-head span[style*="rgba(220"] { font-size: 10px !important; padding: 3px 7px !important; }
         }
@@ -184,9 +184,9 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
                 >
                   CAMP {String(ev.id).padStart(2, "0")}
                 </span>
-                <h3 style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.02em" }}>
+                <h2 style={{ fontSize: 24, fontWeight: 600, letterSpacing: "-0.02em", fontFamily: "inherit" }}>
                   📍 {ev.location}
-                </h3>
+                </h2>
                 <span
                   style={{
                     fontSize: 12,
