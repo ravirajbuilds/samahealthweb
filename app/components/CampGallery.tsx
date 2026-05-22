@@ -162,7 +162,7 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
           </div>
         )}
 
-        {groupedByEvent.map(({ ev, imgs }) => (
+        {groupedByEvent.map(({ ev, imgs }, evIdx) => (
           <div key={ev.id} style={{ marginBottom: 64 }} className="reveal">
             <div
               className="camp-event-head"
@@ -221,8 +221,9 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
                       gap: 16,
                     }}
                   >
-                    {visible.map((img) => {
+                    {visible.map((img, imgIdx) => {
                       const isDoc = img.type === "doc" || img.type === "news" || img.type === "poster";
+                      const eager = evIdx === 0 && imgIdx < 4;
                       return (
                         <button
                           key={img.file}
@@ -285,7 +286,8 @@ export function CampGallery({ events, images }: { events: EventMeta[]; images: I
                             <img
                               src={`/events/${img.file}`}
                               alt={`${img.caption} — ${img.location} blood donation camp`}
-                              loading="lazy"
+                              loading={eager ? "eager" : "lazy"}
+                              fetchPriority={eager ? "high" : "auto"}
                               style={{
                                 width: "100%",
                                 height: "100%",
