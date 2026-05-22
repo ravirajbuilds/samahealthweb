@@ -123,6 +123,8 @@ export default function CampsPage() {
               mass, hydration) from the{" "}
               <a
                 href="https://samawritten.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{ color: "var(--brand)", borderBottom: "1px solid var(--brand-2)" }}
               >
                 SamaBeat
